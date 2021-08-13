@@ -1,0 +1,19 @@
+---
+title: "Cork Oak Modeling"
+author: "Grace Lewin"
+date: "8/13/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+
+source(here("src", "cork_oak_growth.R"))
+```
+
+```{r}
+height_t2(height_t1 = 21, t1 = 4, t2 = 10)
+```
+
+The height of this cork oak at age 12 is expected to be `r height_t2(height_t1 = 21, t1 = 4, t2 = 10)` ft.
