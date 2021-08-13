@@ -43,16 +43,16 @@ Add line-by-line comments wheres prompted in the code below, explaining what eac
 # ------ WHAT HAPPENS HERE? ------ #
 # ------ comment line-by-line ---- #
 
-# The line below...
+# The line below creates a sequence called time_yr with 9 elements from 0-8 increasing by 1. 
 time_yr <- seq(from = 0, to = 8, by = 1)
 
-# The line below...
+# The line below is making an empty matrix with the number of rows being the length of the previous time_yr sequence made and the number of rows being the length of the initial population structure vector.
 proj_year <- matrix(ncol = length(fish_year0), nrow = length(time_yr))
 
-# The line below...
+# The line below assigns the initial population structure vector to the first row of the proj_year empty matrix.
 proj_year[1, ] <- fish_year0
 
-# The for loop below...
+# The for loop below 
 for (i in 2:length(time_yr)) {
   proj_year[i,] <- fish_leslie %*% proj_year[i-1,]
 }
